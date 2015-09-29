@@ -91,7 +91,8 @@ export class Articles extends React.Component {
                         }
                     </article>
                 ): null;
-        var team = data.team.length ?
+        var team = !$.isEmptyObject(data.team) 
+                                            && data.team.length ?
                 (
                     <article className="team">
                         <h1>团队成员</h1>
@@ -115,7 +116,8 @@ export class Articles extends React.Component {
                         }
                     </article>
                 ): null;
-        var milestone = data.milestone.length ?
+        var milestone = !$.isEmptyObject(data.milestone) 
+                                            && data.milestone.length ?
                 (
                     <article className="milestone">
                         <h1>项目大事记</h1>
@@ -139,7 +141,8 @@ export class Articles extends React.Component {
                         }
                     </article>
                 ): null;
-        var growthdata = data.growthdata.length ?
+        var growthdata = !$.isEmptyObject(data.growthdata) 
+                                            && data.growthdata.length ?
                 (
                     <article className="growing-up">
                         <h1>成长数据</h1>
@@ -163,7 +166,8 @@ export class Articles extends React.Component {
                         }
                     </article>
                 ): null;
-        var news = data.news.length ?
+        var news = !$.isEmptyObject(data.news) 
+                                            && data.news.length ?
                 (
                     <article className="news">
                         <h1>新闻</h1>
@@ -287,7 +291,7 @@ export class Invest extends React.Component {
                                         if(!item._key) item._key = item.avatar + K.toString();
                                         arr.push(
                                             <li key={item._key}
-                                                className={data.vc_list.length>3 ? ''
+                                                className={data.vc_list.length >= 3 ? ''
                                                                 :(data.vc_list.length == 1 ? 
                                                                                     'single' :
                                                                                     'double')}>

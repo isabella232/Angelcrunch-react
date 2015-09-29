@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 export class projectDetails extends React.Component {
     constructor(props) {
@@ -15,6 +16,7 @@ export class projectDetails extends React.Component {
             Details: require('components/project/details').projectDetails
           });
         }.bind(this));
+        $(window).scrollTop(0);
     }
 
     render() {

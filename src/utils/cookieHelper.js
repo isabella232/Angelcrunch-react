@@ -15,7 +15,7 @@ var CookieHelper;
         },
         property: $.cookie,
         setUserKey: function (dataSet) {
-            $.cookie(COOKIE.cookieName.user_id,
+            $.cookie(COOKIE.cookieName.userId,
                      dataSet.id,
                      COOKIE.settings);
             $.cookie(COOKIE.cookieName.token,
@@ -37,7 +37,7 @@ var CookieHelper;
                      settings);
         },
         clearUserKey: function () {
-            $.removeCookie(COOKIE.cookieName.user_id,
+            $.removeCookie(COOKIE.cookieName.userId,
                 COOKIE.settings);
             $.removeCookie(COOKIE.cookieName.token,
                 COOKIE.settings);
@@ -49,7 +49,7 @@ var CookieHelper;
                 COOKIE.settings);
         },
         isLogin: function () {
-            if ($.cookie(COOKIE.cookieName.user_id)
+            if ($.cookie(COOKIE.cookieName.userId)
                && $.cookie(COOKIE.cookieName.token)) return true;
             else return false;
         },
