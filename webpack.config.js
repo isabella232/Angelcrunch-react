@@ -30,7 +30,7 @@ var modulePath = { // production
     noParse = isProduction() ?
                   [modulePath.React,
                     modulePath.React_addons
-                    // modulePath.React_Router  //
+                    // modulePath.React_Router   // *Note: You can't put 'modulePath.React_Router' to noParse
                   ] : [];
 
 // Project config
@@ -69,11 +69,6 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js?$/, exclude: /node_modules/, loader: 'babel?cacheDirectory' },
-            {
-                test: /.*\/(react-mixin)\/.*\.js$/,
-                exclude: /.spec.js/,
-                loader: 'uglify'
-            },
             { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
             { test: /\.css$/, loader: 'style!css' },
             {
