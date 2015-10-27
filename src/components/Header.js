@@ -10,13 +10,13 @@ import Notification from 'components/notification';
 
 @Mixin.decorate(Navigation)
 export class Header extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {};
-      this.MakeMenuHide = this.MakeMenuHide.bind(this);
-      this.showMenu = this.showMenu.bind(this);
-      this.signOut = this.signOut.bind(this);
-  }
+    constructor(props) {
+        super(props);
+        this.state = {};
+        this.MakeMenuHide = this.MakeMenuHide.bind(this);
+        this.showMenu = this.showMenu.bind(this);
+        this.signOut = this.signOut.bind(this);
+    }
 
     MakeMenuHide($menu){
         if($menu.hasClass(animatedType.display.block)) {

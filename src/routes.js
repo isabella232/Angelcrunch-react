@@ -10,11 +10,11 @@ import '../static/css/wapsite/base-css.styl';
 
 const routes = (
   <Route name='dombase' path='/' handler={BaseDom} >
-    <Route name='projectDetails' path='/:id/details' handler={projectDetails} />
-    <Route name='projectList' path='/items' handler={projectList} >
-        <Route name='projectListVsNum' path='/items/:pageNum' handler={projectList} />
+    <Route name='projectDetails' path='/:id/details/' handler={projectDetails} />
+    <Route name='projectList' path='/items/' handler={projectList} >
+        <Route name='projectListVsNum' path='/items/:pageNum/' handler={projectList} />
     </Route>
-    <Route name='login' path='/login' handler={Login} />
+    <Route name='login' path='/login/' handler={Login} />
 
     <Redirect to="projectList" />
   </Route>
