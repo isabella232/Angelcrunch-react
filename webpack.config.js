@@ -49,7 +49,7 @@ var Config = isExistsLocalconfig() ?
  *  @type {
  *        __DEV__:      在module 中确定当前是否是测试环境；
                         一般使用 [if(__DEV__) foo();] 的方式调用；
-                        在编译时，值为false 的无效if 语句，将uglify插件擦除。
+                        在编译时，值为false 的无效if 语句，将被uglify插件擦除。
  *        __AjaxDomain: 在module 中确定当前环境的Ajax 路径；
                         使用 ［var Domain = __AjaxDomain;］ 的方式调用。
  *  }
